@@ -44,6 +44,9 @@ TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a5 -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a5 -mfpu=neon -mfloat-abi=softfp
 
+# Use dlmalloc instead of jemalloc for mallocs on low-ram target kernels
+MALLOC_IMPL := dlmalloc
+
 ## Memory
 TARGET_USES_ION := true
 
