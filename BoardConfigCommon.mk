@@ -76,6 +76,9 @@ BOARD_USES_LEGACY_ALSA_AUDIO := true
 TARGET_PROVIDES_LIBAUDIO := true
 TARGET_HAS_QACT := true
 
+# Include an expanded selection of fonts
+EXTENDED_FONT_FOOTPRINT := true
+
 ## EGL, graphics
 USE_OPENGL_RENDERER := true
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
