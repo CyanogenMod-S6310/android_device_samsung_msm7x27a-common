@@ -23,13 +23,13 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 PRODUCT_BOOT_JARS += qcmediaplayer
 
-## Video
+# Video
 PRODUCT_PACKAGES += \
     libstagefrighthw \
     libmm-omxcore \
     libOmxCore
 
-## Graphics
+# Graphics
 PRODUCT_PACKAGES += \
     libgenlock \
     copybit.msm7x27a \
@@ -39,13 +39,14 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm7x27a \
     libtilerenderer
 
-## Misc.
+# FS
 PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs \
-    com.android.future.usb.accessory
+    fsck.f2fs \
+    mkfs.f2fs
 
-## Audio
+# Audio
 PRODUCT_PACKAGES += \
     audio.primary.msm7x27a \
     audio_policy.msm7x27a \
@@ -55,7 +56,7 @@ PRODUCT_PACKAGES += \
     libdashplayer \
     libtinyalsa
 
-## Other HALs
+# Other HALs
 PRODUCT_PACKAGES += \
     camera.msm7x27a \
     lights.msm7x27a \
@@ -63,7 +64,7 @@ PRODUCT_PACKAGES += \
     power.msm7x27a \
     libhealthd.msm7x27a 
 
-## FM radio
+# FM radio
 PRODUCT_PACKAGES += \
     qcom.fmradio \
     libqcomfm_jni \
@@ -93,7 +94,8 @@ PRODUCT_PACKAGES += qcmediaplayer
 
 # Other
 PRODUCT_PACKAGES += \
-    libqservice
+    libqservice \
+    com.android.future.usb.accessory
 
 # Product specific Packages
 PRODUCT_PACKAGES += \
