@@ -228,7 +228,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.locale.region=GB
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.use-awesome=true
+    persist.sys.media.use-awesome=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     config.disable_atlas=true
