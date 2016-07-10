@@ -12,11 +12,10 @@ on init
     mkdir /storage/emulated 0555 root root
 
     # External storage directories
-    mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
-
-    mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
-    mkdir /storage/sdcard1 0700 root root
-    mkdir /storage/usbdisk 0700 root root
+    mkdir /mnt/media_rw/sdcard1 0770 media_rw media_rw
+    mkdir /mnt/media_rw/usbdisk 0770 media_rw media_rw
+    mkdir /storage/sdcard1 0771 root sdcard_r
+    mkdir /storage/usbdisk 0771 root sdcard_r
 
     export EXTERNAL_STORAGE /storage/emulated/legacy
     export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
@@ -178,7 +177,6 @@ on post-fs-data
 
     # we will remap this as /storage/sdcard with the sdcard fuse tool
     mkdir /data/media 0770 media_rw media_rw
-    chown media_rw media_rw /data/media
 
     setprop vold.post_fs_data_done 1
 
@@ -279,8 +277,11 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
 
-# fusewrapped external sdcard daemon running as media_rw (1023)
 service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
+    class late_start
+    disabled
+
+service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
     class late_start
     disabled
 
