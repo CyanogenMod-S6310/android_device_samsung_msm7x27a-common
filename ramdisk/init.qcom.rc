@@ -229,23 +229,23 @@ service hostapd /system/bin/hostapd -dddd /data/misc/wifi/hostapd.conf
     oneshot
     disabled
 
-service dhcpcd_wlan0 /system/bin/dhcpcd -aABDKL
-    class main
++service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
+    class late_start
     disabled
     oneshot
 
 service iprenew_wlan0 /system/bin/dhcpcd -n
-    class main
+    class late_start
     disabled
     oneshot
 
 service dhcpcd_bt-pan /system/bin/dhcpcd -BKLG
-    class main
+    class late_start
     disabled
     oneshot
 
 service iprenew_bt-pan /system/bin/dhcpcd -n
-    class main
+    class late_start
     disabled
     oneshot
 
