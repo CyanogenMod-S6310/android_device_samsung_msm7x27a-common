@@ -191,7 +191,13 @@ PRODUCT_COPY_FILES += \
 ## Charger
 PRODUCT_PACKAGES += \
     charger \
-    charger_res_images 
+    charger_res_images
+
+# ART
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-filter=balanced \
+    dalvik.vm.dex2oat-flags=--no-watch-dog \
+    dalvik.vm.image-dex2oat-filter=speed 
 
 ## Properties
 PRODUCT_PROPERTY_OVERRIDES += \
