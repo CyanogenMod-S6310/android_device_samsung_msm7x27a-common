@@ -17,7 +17,6 @@
 
 ## Kernel, bootloader etc.
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_RADIOIMAGE := true
 ifeq ($(CM_BUILD),delos3geur)
 TARGET_KERNEL_SOURCE := kernel/samsung/delos3geur
 else
@@ -129,7 +128,6 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 24
 
 ## UMS
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun%d/file"
 
 ## Samsung has weird framebuffer
@@ -163,8 +161,5 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 5573804032
 ## Other Features
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-BOARD_HAS_SDCARD_INTERNAL := true
-BOARD_HAS_DOWNLOAD_MODE := true
-BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_FLASH_BLOCK_SIZE := 131072
