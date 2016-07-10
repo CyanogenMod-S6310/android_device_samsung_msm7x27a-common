@@ -18,8 +18,6 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/msm7x27a-common/overlay
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=2
 
-PRODUCT_TAGS += dalvik.gc.type-precise
-
 PRODUCT_AAPT_CONFIG := normal mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
@@ -95,12 +93,19 @@ PRODUCT_PACKAGES += qcmediaplayer
 
 # Other
 PRODUCT_PACKAGES += \
-    libnetcmdiface \
     libqservice
 
 # Product specific Packages
 PRODUCT_PACKAGES += \
     SamsungServiceMode
+
+# WPA supplicant
+PRODUCT_PACKAGES += \
+    dhcpcd.conf \
+    hostapd \
+    libwpa_client \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 # qcmediaplayer
 PRODUCT_PACKAGES += qcmediaplayer
