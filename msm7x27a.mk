@@ -236,6 +236,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.max_starting_bg=8
+
 $(call inherit-product, build/target/product/full.mk)
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
