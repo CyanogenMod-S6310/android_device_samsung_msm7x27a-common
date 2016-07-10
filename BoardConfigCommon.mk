@@ -18,11 +18,7 @@
 ## Kernel, bootloader etc.
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
-ifeq ($(CM_BUILD),delos3geur)
-TARGET_KERNEL_SOURCE := kernel/samsung/delos3geur
-else
 TARGET_KERNEL_SOURCE := kernel/samsung/msm7x27a
-endif
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01300000
