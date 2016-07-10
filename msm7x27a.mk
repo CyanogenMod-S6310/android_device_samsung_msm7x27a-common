@@ -214,6 +214,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb \
+    ro.sys.usb.default.config=mtp \
     ro.vold.umsdirtyratio=50 
 
 PRODUCT_PROPERTY_OVERRIDES += \
