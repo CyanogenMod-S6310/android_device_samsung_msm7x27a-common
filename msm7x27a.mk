@@ -136,6 +136,10 @@ PRODUCT_COPY_FILES += \
 
 ## Media
 PRODUCT_COPY_FILES += \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_ffmpeg.xml:system/etc/media_codecs_ffmpeg.xml \
     device/samsung/msm7x27a-common/prebuilt/media_codecs.xml:system/etc/media_codecs.xml \
     device/samsung/msm7x27a-common/prebuilt/media_profiles.xml:system/etc/media_profiles.xml 
 
