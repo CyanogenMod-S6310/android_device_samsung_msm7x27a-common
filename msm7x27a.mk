@@ -224,6 +224,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.locale.language=en \
     ro.product.locale.region=GB
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.use-awesome=true
+
 $(call inherit-product, build/target/product/full.mk)
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
